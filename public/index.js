@@ -1,6 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path');
+const { menu } = require('./menu')
 
 const createWindow = () => {
 	// Create the browser window.
@@ -12,6 +13,7 @@ const createWindow = () => {
 		},
 	});
 
+	Menu.setApplicationMenu(menu)
 	// eslint-disable-next-line no-magic-numbers
 	const port = 3000;
 
