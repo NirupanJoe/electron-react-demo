@@ -8,6 +8,7 @@ const createWindow = () => {
 	const mainWindow = new BrowserWindow({
 		width: 1000,
 		height: 600,
+		icon: __dirname + '/logo512.png',
 		webPreferences: {
 			nodeIntegration: true,
 		},
